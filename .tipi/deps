@@ -1,0 +1,24 @@
+{
+  "cpp-pre/file" : {
+    "@": "feature/sha1sum", 
+    "requires" : { 
+      "boostorg/boost" : { "@" : "boost-1.80.0", "u" : true
+        , "packages" : ["boost_system", "boost_filesystem", "boost_regex"]
+        , "targets" : ["Boost::system", "Boost::filesystem", "Boost::regex"] 
+      }
+    } 
+  }
+
+  ,"nlohmann/json" :  { "@" : "v3.11.2", "x" : ["benchmarks"] }
+
+  ,"cpp-pre/json" : {
+    "@": "feature/move-to-native-tipi-deps", 
+    "requires" : { 
+      "nlohmann/json" :  { "@" : "v3.11.2", "x" : ["benchmarks"] }
+      , "boostorg/boost" : { "@" : "boost-1.80.0", "u" : true
+      , "packages" : ["boost_system", "boost_filesystem", "boost_regex", "boost_fusion"]
+      , "targets" : ["Boost::system", "Boost::filesystem", "Boost::regex", "Boost::fusion"] 
+    }
+    } 
+  }
+}
